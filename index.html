@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced Counter App</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body class="light">
+
+<div class="app">
+  <!-- Header -->
+  <header>
+    <h2>Counter</h2>
+    <button id="settingsBtn">⚙️</button>
+  </header>
+
+  <!-- Counter Display -->
+  <main>
+    <h1 id="count">0</h1>
+    <p id="limitText">Limit: ∞</p>
+
+    <div class="controls">
+        <button id="decrease">➖</button>
+        <!-- Reset button with circular arrow -->
+        <button id="reset">🔄</button>
+        <button id="increase">➕</button>
+    </div>
+  </main>
+
+  <!-- Settings Panel -->
+  <div class="settings hidden" id="settingsPanel">
+    <h3>Settings</h3>
+
+    <!-- Theme toggle -->
+    <div class="setting-item">
+      <span>Theme</span>
+      <label class="switch">
+        <input type="checkbox" id="themeToggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+
+    <!-- User-defined Limit -->
+    <div class="setting-item">
+      <span>Set Counter Limit</span>
+      <input type="number" id="limitInput" min="1" placeholder="Enter limit"/>
+    </div>
+
+    <!-- Background color -->
+    <div class="setting-item">
+      <span>Background Color</span>
+      <div class="colors">
+        <span class="color" data-bg="#1e1e1e"></span>
+        <span class="color" data-bg="#0d47a1"></span>
+        <span class="color" data-bg="#004d40"></span>
+        <span class="color" data-bg="#311b92"></span>
+        <span class="color" data-bg="#3e2723"></span>
+        <span class="color" data-bg="#263238"></span>
+        <span class="color" data-bg="#37474f"></span>
+        <span class="color" data-bg="#212121"></span>
+        <span class="color" data-bg="#1a237e"></span>
+        <span class="color" data-bg="#004d40"></span>
+      </div>
+    </div>
+
+    <button id="closeSettings" class="close-btn">Done</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
